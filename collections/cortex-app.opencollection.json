@@ -1,0 +1,141 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cortex API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Catalog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all catalog entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/catalog"
+          },
+          "docs": "List all catalog entities"
+        },
+        {
+          "info": {
+            "name": "Retrieve specific entity details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/catalog/:tagOrId",
+            "params": [
+              {
+                "name": "tagOrId",
+                "value": "",
+                "type": "path",
+                "description": "The entity tag or unique identifier."
+              }
+            ]
+          },
+          "docs": "Retrieve specific entity details"
+        },
+        {
+          "info": {
+            "name": "List entity descriptors (YAML definitions)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/catalog/descriptors"
+          },
+          "docs": "List entity descriptors (YAML definitions)"
+        },
+        {
+          "info": {
+            "name": "View entity dependencies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/catalog/:tagOrId/dependencies",
+            "params": [
+              {
+                "name": "tagOrId",
+                "value": "",
+                "type": "path",
+                "description": "The entity tag or unique identifier."
+              }
+            ]
+          },
+          "docs": "View entity dependencies"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scorecards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all scorecards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/scorecards"
+          },
+          "docs": "List all scorecards"
+        },
+        {
+          "info": {
+            "name": "Get scorecard details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/scorecards/:tag",
+            "params": [
+              {
+                "name": "tag",
+                "value": "",
+                "type": "path",
+                "description": "The scorecard tag."
+              }
+            ]
+          },
+          "docs": "Get scorecard details"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Initiatives",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List initiatives",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/initiatives"
+          },
+          "docs": "List initiatives"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
