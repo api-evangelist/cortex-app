@@ -129,7 +129,7 @@ common:
     url: finops/cortex-app-finops.yml
   - type: Integrations
     url: https://www.cortex.io/integrations
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.cortex.io/llms.txt
 integrations:
   - name: GitHub
