@@ -113,6 +113,10 @@ apis:
       - type: Documentation
         url: https://docs.cortex.io/
 common:
+  - type: DomainSecurity
+    url: security/cortex-app-domain-security.yml
+  - type: Authentication
+    url: authentication/cortex-app-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/cortexapp
   - type: Website
@@ -131,6 +135,8 @@ common:
     url: https://www.cortex.io/integrations
   - type: LlmsText
     url: https://docs.cortex.io/llms.txt
+  - url: https://www.cortex.io/blog
+    type: Blog
 integrations:
   - name: GitHub
   - name: GitLab
