@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Cortex Catalog Initiatives API
+  description: 'REST endpoints exposed by Cortex, the Internal Developer Portal and
+
+    service catalog. Endpoints provide read access to catalog entities,
+
+    scorecards, initiatives, and entity descriptors. Authentication uses a
+
+    personal access token as a Bearer token.
+
+    '
+  version: v1
+  contact:
+    name: Cortex
+    url: https://docs.cortex.io
+servers:
+- url: https://api.getcortexapp.com
+  description: Cortex API
+security:
+- BearerAuth: []
+tags:
+- name: Initiatives
+  description: Initiative operations
+paths:
+  /api/v1/initiatives:
+    get:
+      tags:
+      - Initiatives
+      summary: List initiatives
+      operationId: listInitiatives
+      responses:
+        '200':
+          description: A list of initiatives.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  initiatives:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Initiative'
+components:
+  schemas:
+    Initiative:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: Personal Access Token
+      description: 'Provide a Cortex personal access token using `Authorization: Bearer
+
+        <CORTEX_TOKEN>`.
+
+        '

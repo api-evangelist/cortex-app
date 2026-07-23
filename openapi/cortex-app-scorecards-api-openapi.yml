@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: Cortex Catalog Scorecards API
+  description: 'REST endpoints exposed by Cortex, the Internal Developer Portal and
+
+    service catalog. Endpoints provide read access to catalog entities,
+
+    scorecards, initiatives, and entity descriptors. Authentication uses a
+
+    personal access token as a Bearer token.
+
+    '
+  version: v1
+  contact:
+    name: Cortex
+    url: https://docs.cortex.io
+servers:
+- url: https://api.getcortexapp.com
+  description: Cortex API
+security:
+- BearerAuth: []
+tags:
+- name: Scorecards
+  description: Scorecard operations
+paths:
+  /api/v1/scorecards:
+    get:
+      tags:
+      - Scorecards
+      summary: List all scorecards
+      operationId: listScorecards
+      responses:
+        '200':
+          description: A list of scorecards.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  scorecards:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Scorecard'
+  /api/v1/scorecards/{tag}:
+    parameters:
+    - in: path
+      name: tag
+      required: true
+      schema:
+        type: string
+      description: The scorecard tag.
+    get:
+      tags:
+      - Scorecards
+      summary: Get scorecard details
+      operationId: getScorecard
+      responses:
+        '200':
+          description: The scorecard.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Scorecard'
+components:
+  schemas:
+    Scorecard:
+      type: object
+      properties:
+        tag:
+          type: string
+        name:
+          type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: Personal Access Token
+      description: 'Provide a Cortex personal access token using `Authorization: Bearer
+
+        <CORTEX_TOKEN>`.
+
+        '
