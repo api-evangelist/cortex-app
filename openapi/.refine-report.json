@@ -1,0 +1,18 @@
+{
+  "provider": "cortex-app",
+  "sources": [
+    "cortex-app-catalog-api-openapi.yml",
+    "cortex-app-initiatives-api-openapi.yml",
+    "cortex-app-scorecards-api-openapi.yml"
+  ],
+  "outputs": [
+    "cortex-app-catalog-api-openapi.yml",
+    "cortex-app-initiatives-api-openapi.yml",
+    "cortex-app-scorecards-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
