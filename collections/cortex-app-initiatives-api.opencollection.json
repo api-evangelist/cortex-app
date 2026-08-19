@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cortex Catalog Initiatives API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Initiatives",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List initiatives",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/initiatives"
+          },
+          "docs": "List initiatives"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

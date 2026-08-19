@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cortex Catalog Scorecards API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scorecards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all scorecards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/scorecards"
+          },
+          "docs": "List all scorecards"
+        },
+        {
+          "info": {
+            "name": "Get scorecard details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.getcortexapp.com/api/v1/scorecards/:tag",
+            "params": [
+              {
+                "name": "tag",
+                "value": "",
+                "type": "path",
+                "description": "The scorecard tag."
+              }
+            ]
+          },
+          "docs": "Get scorecard details"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
