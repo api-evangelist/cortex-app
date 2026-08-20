@@ -117,6 +117,10 @@ apis:
   baseURL: https://docs.cortex.io/
   tags:
   - MCP
+  - Artificial Intelligence
+  - Agents
+  tags_raw:
+  - MCP
   - AI
   - Agents
   properties:
