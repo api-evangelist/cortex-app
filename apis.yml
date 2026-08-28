@@ -12,6 +12,18 @@ description: >-
   PagerDuty, Slack, Jira, Snyk, SonarQube, and many other integrations, and
   exposes a REST API and an MCP server so that humans and AI agents can query
   the catalog, scorecards, dependencies, and entity descriptors.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
