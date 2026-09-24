@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Cortex Catalog API
   description: 'REST endpoints exposed by Cortex, the Internal Developer Portal and
